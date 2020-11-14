@@ -19,6 +19,8 @@ mongoose.connect('mongodb+srv://fb:fb@fb-mern.pgwy7.mongodb.net/fb?retryWrites=t
     console.log('connection failed');
   });
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 app
   .use(bodyParser.urlencoded({extended: true}))
