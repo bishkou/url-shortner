@@ -11,7 +11,13 @@ const app = express();
 app.use(cors());
 
 // change the db
-
+mongoose.connect('mongodb+srv://fb:fb@fb-mern.pgwy7.mongodb.net/fb?retryWrites=true&w=majority\n')
+  .then(() => {
+    console.log('everything in place');
+  })
+  .catch(() => {
+    console.log('connection failed');
+  });
 
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
