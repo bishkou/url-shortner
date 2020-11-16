@@ -26,8 +26,12 @@ exports.getOneUrl = (req, res) => {
   Url.findOne({slug})
     .exec()
     .then(doc => {
-      // console.log(doc)
-      res.redirect(doc.url);
+      // console.log(doc.url)
+      // return res.redirect(doc.url);
+      res.status(200).json({
+        url: doc.url
+      })
+      // res.redirect(doc.url);
     })
     .catch(err => {
       // console.log(err);
@@ -36,6 +40,8 @@ exports.getOneUrl = (req, res) => {
 }
 
 exports.addUrl = async (req, res) => {
+
+  console.log(req.body)
 
   let { slug, url } = req.body
 

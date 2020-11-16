@@ -1,0 +1,12 @@
+
+  <form [formGroup]="urlForm" (submit)="onSubmit()">
+    <span>URL:</span>
+    <input formControlName="url" type="text">
+    <span>SLUG:</span>
+    <input  formControlName="slug" type="text">
+    <button type="submit">Sumbit</button>
+
+    <a *ngIf="disp" [href]="url">{{url}}</a>
+  </form>
+
+

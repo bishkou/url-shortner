@@ -20,7 +20,6 @@ mongoose.connect('mongodb+srv://fb:fb@fb-mern.pgwy7.mongodb.net/fb?retryWrites=t
   });
 
 var distDir = process.cwd() +"/dist/";
-// console.log(process.cwd() +"\\dist\\")
 app.use(express.static(distDir));
 
 app
