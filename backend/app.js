@@ -3,7 +3,6 @@ var cors = require('cors')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const urlRoutes = require('./routes/url')
-const helmet = require("helmet");
 
 
 const app = express();
@@ -12,7 +11,6 @@ const app = express();
 //enable cors
 app.use(cors());
 app.enable('trust proxy');
-app.use(helmet());
 
 // change the db
 mongoose.connect('mongodb+srv://fb:fb@fb-mern.pgwy7.mongodb.net/fb?retryWrites=true&w=majority\n')
