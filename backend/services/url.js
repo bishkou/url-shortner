@@ -28,10 +28,10 @@ exports.getOneUrl = (req, res) => {
     .then(doc => {
       // console.log(doc.url)
       // return res.redirect(doc.url);
-      res.status(200).json({
-        url: doc.url
-      })
-      // res.redirect(doc.url);
+      // res.status(200).json({
+      //   url: doc.url
+      // })
+      res.redirect(doc.url);
     })
     .catch(err => {
       // console.log(err);

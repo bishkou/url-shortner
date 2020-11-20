@@ -21,9 +21,10 @@ export class SlugComponent implements OnInit {
       })
     };
     this
-      .http.get('http://dailygads.com/url/' + slug, httpOptions).subscribe(data => {
+      .http.get('url/' + slug, httpOptions).subscribe(data => {
       // @ts-ignore
-      document.location.href = data.url;
+      // document.location = data.url;
+      console.log(data);
     });
   }
 

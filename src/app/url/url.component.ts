@@ -32,7 +32,7 @@ export class UrlComponent implements OnInit {
     const slug = this.urlForm.get('slug').value;
 
     this
-      .http.post('http://dailygads.com/url', {url, slug}).subscribe((data) => {
+      .http.post('url', {url, slug}).subscribe((data) => {
       console.log(data);
     });
     this.disp = true;
