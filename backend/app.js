@@ -1,14 +1,14 @@
 const express = require('express');
-var cors = require('cors')
+const cors = require('cors')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const urlRoutes = require('./routes/url')
-
 
 const app = express();
 
 
 //enable cors
+
 app.use(cors());
 app.enable('trust proxy');
 
