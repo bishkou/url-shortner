@@ -21,7 +21,7 @@ export class SlugComponent implements OnInit {
       })
     };
     this
-      .http.get('http://localhost:3000/url/' + slug, httpOptions).subscribe(data => {
+      .http.get('url/' + slug, httpOptions).subscribe(data => {
       // @ts-ignore
       document.location = data.url;
       // console.log("yess");
